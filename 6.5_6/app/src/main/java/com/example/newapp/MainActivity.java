@@ -109,6 +109,27 @@ public class MainActivity extends AppCompatActivity {
         mView.setText(longitude.toString());
         metadata.setText(latitude.toString());
 
+
+        MapView mapView = new MapView(this);
+        ViewGroup mapViewContainer = (ViewGroup) findViewById(R.id.map_view);
+        mapViewContainer.addView(mapView);
+
+        //마커 여기다 복붙
+
+        MapPolyline polyline = new MapPolyline();
+        polyline.setTag(1000);
+        polyline.setLineColor(Color.argb(128, 255, 51, 0));
+
+        for(int i = length; i <= length; i++){
+            latline[i] = latitude;
+            longline[i] = longitude;
+        }
+        for (int j = 0; j < length+1; j++){
+            polyline.addPoint(MapPoint.mapPointWithGeoCoord(latline[j], longline[j]));
+            mapView.addPolyline(polyline);
+        }
+        length++;
+
     }
 
     private Float convertToDegree(String stringDMS) {
