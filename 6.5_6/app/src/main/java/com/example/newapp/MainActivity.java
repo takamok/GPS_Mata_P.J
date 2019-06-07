@@ -114,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
         ViewGroup mapViewContainer = (ViewGroup) findViewById(R.id.map_view);
         mapViewContainer.addView(mapView);
 
-        //마커 여기다 복붙
+        //마커 여기다 복붙//
 
         MapPolyline polyline = new MapPolyline();
         polyline.setTag(1000);
