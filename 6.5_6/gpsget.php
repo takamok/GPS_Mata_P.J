@@ -1,7 +1,7 @@
 <?php
 header("Content-Type: text/html; charset=UTF-8");
 
-$db_host="localhost";
+$db_host="211.183.34.181";
 $db_user="root";
 $db_passwd="apmsetup";
 $db_name="gpsdata";
