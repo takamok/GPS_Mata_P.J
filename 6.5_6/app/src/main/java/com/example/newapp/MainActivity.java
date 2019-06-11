@@ -33,6 +33,9 @@ public class MainActivity extends AppCompatActivity {
     private final int PERMISSIONS_REQUEST_RESULT = 1;
     private boolean valid = false;
     private Float latitude, longitude;
+    private Float[] latline = new Float[10]; //초기 배열 값 설정 증가 가능
+    private Float[] longline = new Float[10];
+    int length = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -182,7 +185,4 @@ public class MainActivity extends AppCompatActivity {
     public String toString() {
         return (String.valueOf(latitude) + ", " + String.valueOf(longitude));
     }
-
-
-
 }
